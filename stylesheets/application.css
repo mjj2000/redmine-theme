@@ -575,7 +575,7 @@ table.list th {
 table.list tbody td,
 table.list tbody tr td {
   border-bottom: solid 1px #ddd;
-  font-size: 11px;
+  font-size: 17px;
   padding: 7px 10px 7px 3px;
 }
 table.list tbody tr:hover,
@@ -885,6 +885,7 @@ input[type='submit']:active,
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
   background-position: 0 -100px;
   /* IE only stuff */
+
   border-bottom: 0\9;
   border-top: 1px solid #666\9;
 }
@@ -1601,4 +1602,35 @@ body.stealth_on #header {
 }
 body.stealth_on #header {
   background: #555;
+}
+/*---------- Customize ----------*/
+/* Mixin */
+#roadmap a.issue {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 7px;
+}
+#roadmap a.issue.priority-highest {
+  background: #FF0000;
+  color: #FFF;
+}
+#roadmap a.issue.priority-highest.closed {
+  color: #000;
+  background: #999;
+}
+#roadmap a.issue.priority-high2 {
+  background: #DF8F8F;
+  color: #FFF;
+}
+#roadmap a.issue.priority-high2.closed {
+  color: gray;
+  background: #CCC;
+}
+#roadmap a.issue.priority-high3 {
+  color: #FF0000;
+}
+#roadmap a.issue.priority-high3.closed {
+  color: #777;
 }

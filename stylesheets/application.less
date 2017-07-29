@@ -344,7 +344,7 @@ table.list {
   tbody {
     td, tr td {
       border-bottom: solid 1px #ddd;
-      font-size: 11px;
+      font-size: 17px;
       padding: 7px 10px 7px 3px;
     }
     tr:hover, tr.group:hover {
@@ -811,3 +811,43 @@ tr.message.sticky td.subject {
 @import url(plugins/redmine_stealth.less);
 
 //@import url(rebrand/pixel-cookers.less);
+
+/*---------- Customize ----------*/
+/* Mixin */
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// RoadMap
+#roadmap {
+  a.issue {
+    .border-radius();
+    display: inline-block;
+    padding:7px;
+
+    &.priority-highest {
+      background: #FF0000;
+      color: #FFF;
+      &.closed {
+        color: #000;
+        background: #999;
+      }
+    }
+    &.priority-high2 {
+      background: #DF8F8F;
+      color: #FFF;
+      &.closed {
+        color: gray;
+        background: #CCC;
+      }
+    }
+    &.priority-high3 {
+      color: #FF0000;
+      &.closed {
+        color: #777;
+      }
+    }
+  }
+}
